@@ -1,0 +1,15 @@
+{% extends '_layout.html' %}
+
+{% block body %}
+    <!--<div class="starter-template">-->
+    <div class="jumbotron text-center">
+        <h1>Welcome to Python Flask Application</h1>
+        <p class="lead">
+            This is sample application developed to learn and explore python based web application development using the Flask framework.
+        </p>
+        {% if session.logged_in == NULL %}
+            <a href="/register" class="btn btn-primary btn-lg">Register</a>
+            <a href="/login" class="btn btn-success btn-lg">Login</a>
+        {% endif %}
+    </div>
+{% endblock %}
